@@ -1,0 +1,190 @@
+/*=============== Start Global Rules ===============*/
+:root {
+    --Bright-blue: hsl(245, 75%, 52%);
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+
+body {
+    font-family: "Red Hat Display", sans-serif;
+    background-color: var(--Pale-blue);
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-image: url(images/pattern-background-desktop.svg);
+    background-repeat: repeat-x;
+    padding: 20px;
+}
+
+@media (max-width: 480px) {
+    body {
+        background-image: url(images/pattern-background-mobile.svg);
+    }
+}
+
+/*=============== End Global Rules ===============*/
+
+
+/*=============== Start Card ===============*/
+.card {
+    background-color: white;
+    max-width: 450px;
+    border-radius: 12px;
+    -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.card>img {
+    border-radius: 12px 12px 0 0;
+    max-width: 100%;
+}
+
+/* Main Text */
+.card .text {
+    padding: 40px 45px;
+}
+
+@media (max-width: 480px) {
+    .card .text {
+        padding: 15px 20px;
+    }
+}
+
+.card .text h2 {
+    color: var(--Dark-blue);
+    font-weight: 900;
+    text-align: center;
+    font-size: 27px;
+}
+
+.card .text>p {
+    text-align: center;
+    max-width: 300px;
+    margin: 18px auto;
+    line-height: 1.6;
+    color: var(--Desaturated-blue);
+}
+
+/* Music */
+.card .text .music {
+    background-color: var(--Very-pale-blue);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: auto auto 30px;
+    padding: 24px;
+    border-radius: 20px;
+}
+
+.card .text .music .music-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-column-gap: 20px;
+    -moz-column-gap: 20px;
+    column-gap: 20px;
+}
+
+.card .text .music .music-text p:first-child {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.card .text .music .music-text div p:last-child {
+    color: var(--Desaturated-blue);
+    line-height: 1.5;
+}
+
+.card .text .music>a {
+    -webkit-transition: color 0.25s;
+    -o-transition: color 0.25s;
+    transition: color 0.25s;
+    font-size: 14px;
+    color: var(--Bright-blue);
+    font-weight: bold;
+}
+
+.card .text .music>a:hover {
+    color: hsl(245deg 83% 68%);
+    text-decoration: none;
+}
+
+/* Button */
+.card .text button {
+    margin: 21px auto;
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: var(--Bright-blue);
+    color: white;
+    border: none;
+    font-weight: 700;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    -webkit-transition: background-color 0.25s, -webkit-transform 0.25s;
+    transition: background-color 0.25s, -webkit-transform 0.25s;
+    -o-transition: transform 0.25s, background-color 0.25s;
+    transition: transform 0.25s, background-color 0.25s;
+    transition: transform 0.25s, background-color 0.25s, -webkit-transform 0.25s;
+    -webkit-box-shadow: 0 0 15px #bbb;
+    box-shadow: 0 0 15px #bbb;
+}
+
+.card .text button:hover {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+    background-color: hsl(245deg 83% 68%);
+}
+
+/* Order Link */
+.card .text a.order {
+    color: var(--Desaturated-blue);
+    text-decoration: none;
+    -webkit-transition: color 0.25s;
+    -o-transition: color 0.25s;
+    transition: color 0.25s;
+    display: block;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: auto;
+    font-weight: 900;
+}
+
+.card .text a.order:hover {
+    color: black;
+}
+
+/*=============== End Card ===============*/
